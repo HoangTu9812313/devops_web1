@@ -83,6 +83,7 @@ exports.confirmVnpayReturn = async (req, res) => {
     }
     console.log("req", req.user)
     console.log("user id", req.user.userId)
+    
     // ✅ Lưu đơn hàng khi thanh toán thành công
     const order = await Order.create({
       userId: req.user.userId || null,
